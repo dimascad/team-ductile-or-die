@@ -32,7 +32,7 @@
         }
         
         .container {
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -65,12 +65,6 @@
             margin-top: 10px;
             color: #000000;
             font-weight: 700;
-            text-shadow: 
-                -2px -2px 0 #fff,
-                2px -2px 0 #fff,
-                -2px 2px 0 #fff,
-                2px 2px 0 #fff,
-                0 0 3px #fff;
         }
         
         .content {
@@ -108,7 +102,7 @@
         
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(5, minmax(220px, 1fr));
+            grid-template-columns: repeat(5, minmax(280px, 1fr));
             gap: 15px;
             margin-bottom: 40px;
         }
@@ -117,10 +111,11 @@
             background-color: rgba(236, 240, 241, 0.98);
             padding: 0;
             border-radius: 12px;
-            overflow: hidden;
+            overflow: visible;
             border: 2px solid rgba(189, 195, 199, 0.5);
             transition: transform 0.3s, box-shadow 0.3s;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            min-width: 280px;
         }
         
         .team-member:hover {
@@ -161,8 +156,9 @@
         }
         
         .member-info {
-            padding: 20px;
+            padding: 15px;
             text-align: center;
+            width: 100%;
         }
         
         .member-name {
@@ -223,13 +219,15 @@
         /* LinkedIn badge container */
         .linkedin-badge-container {
             margin-top: 15px;
-            min-height: 300px;
-            padding: 0 10px;
+            min-height: 320px;
+            padding: 0;
+            width: 100%;
+            overflow: visible;
         }
         
-        @media (max-width: 1200px) {
+        @media (max-width: 1500px) {
             .team-grid {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(3, minmax(280px, 1fr));
             }
         }
         
@@ -281,7 +279,6 @@
                 <div class="team-grid">
                     <div class="team-member">
                         <div class="member-info">
-                            <h3 class="member-name">Kasar Moos</h3>
                             <div class="linkedin-badge-container">
                                 <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="kasar-moos-a1b1b11b7" data-version="v1">
                                     <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/kasar-moos-a1b1b11b7?trk=profile-badge">Kasar Moos</a>
@@ -292,7 +289,7 @@
                     
                     <div class="team-member">
                         <div class="member-info">
-                            <h3 class="member-name">Evelyn Detwiler</h3>
+                            <!-- Name removed - shown in badge --> <h3 class="member-name" style="display:none;">Evelyn Detwiler</h3>
                             <div class="linkedin-badge-container">
                                 <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="evelyn-detwiler-mse" data-version="v1">
                                     <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/evelyn-detwiler-mse?trk=profile-badge">Evelyn Detwiler</a>
@@ -303,7 +300,7 @@
                     
                     <div class="team-member">
                         <div class="member-info">
-                            <h3 class="member-name">Anthony DiMascio</h3>
+                            <!-- Name removed - shown in badge --> <h3 class="member-name" style="display:none;">Anthony DiMascio</h3>
                             <div class="linkedin-badge-container">
                                 <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="dimascad" data-version="v1">
                                     <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/dimascad?trk=profile-badge">Anthony DiMascio</a>
@@ -314,7 +311,7 @@
                     
                     <div class="team-member">
                         <div class="member-info">
-                            <h3 class="member-name">Sarah Harvey</h3>
+                            <!-- Name removed - shown in badge --> <h3 class="member-name" style="display:none;">Sarah Harvey</h3>
                             <div class="linkedin-badge-container">
                                 <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="sarahharvey386" data-version="v1">
                                     <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/sarahharvey386?trk=profile-badge">Sarah Harvey</a>
@@ -325,7 +322,7 @@
                     
                     <div class="team-member">
                         <div class="member-info">
-                            <h3 class="member-name">Roshan Robinson</h3>
+                            <!-- Name removed - shown in badge --> <h3 class="member-name" style="display:none;">Roshan Robinson</h3>
                             <div class="linkedin-badge-container">
                                 <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="roshan-robinson-58932b235" data-version="v1">
                                     <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/roshan-robinson-58932b235?trk=profile-badge">Roshan Robinson</a>
