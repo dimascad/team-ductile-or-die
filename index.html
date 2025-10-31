@@ -354,5 +354,23 @@
     
     <!-- LinkedIn Profile Badge Script -->
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+    
+    <!-- Hide fallback links after badges load -->
+    <script>
+        setTimeout(function() {
+            // Hide the fallback links
+            var links = document.querySelectorAll('.badge-base__link.LI-simple-link');
+            links.forEach(function(link) {
+                link.style.display = 'none';
+            });
+            
+            // Make badges larger if they're not already
+            var badges = document.querySelectorAll('.LI-profile-badge-view');
+            badges.forEach(function(badge) {
+                badge.style.transform = 'scale(1.3)';
+                badge.style.transformOrigin = 'top center';
+            });
+        }, 3000); // Wait 3 seconds for badges to load
+    </script>
 </body>
 </html>
