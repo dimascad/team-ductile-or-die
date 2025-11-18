@@ -16,4 +16,6 @@ This repository connects our **Instructables project**, **live landing site**, a
 💻 **Project Team Landing Website:**  
 [dimascad.github.io/team-ductile-or-die →](https://dimascad.github.io/team-ductile-or-die/)
 
+![Thermomechanical Processing Diagram for Modified T73 Aluminum Alloy](thermomechanical_processing_original.gif)
+
 ---
