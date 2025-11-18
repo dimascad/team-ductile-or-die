@@ -18,4 +18,6 @@ This repository connects our **Instructables project**, **live landing site**, a
 
 ![Thermomechanical Processing Diagram for Modified T73 Aluminum Alloy](thermomechanical_processing_original.gif)
 
+*Animated thermomechanical processing route for Modified 7249-T73 aluminum alloy. This multi-step process optimizes the alloy's microstructure for enhanced strength and stress-corrosion resistance in aerospace applications.*
+
 ---
