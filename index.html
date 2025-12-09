@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+    ╔════════════════════════════════════════════════════════════════════════════╗
+    ║                    TEAM LINKEDIN LANDING PAGE TEMPLATE                      ║
+    ║                                                                            ║
+    ║  Original: Team Ductile or Die (MATSCEN 3331, Ohio State University)       ║
+    ║  Created by: Anthony DiMascio                                              ║
+    ║  Purpose: Embed all team LinkedIn profiles when platforms limit links      ║
+    ╚════════════════════════════════════════════════════════════════════════════╝
+    
+    DEPLOYMENT INSTRUCTIONS:
+    1. Fork this repository on GitHub
+    2. Edit the STEP sections below (search "STEP" to find them)
+    3. Go to repository Settings > Pages
+    4. Under "Source", select "Deploy from a branch"
+    5. Choose "main" branch and "/ (root)" folder
+    6. Click Save and wait a few minutes for deployment
+    7. Your site will be available at: https://[your-username].github.io/[repository-name]/
+    -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <!-- ═══════════════════════════════════════════════════════════════════════════
+         STEP 1: Change the page title (appears in browser tab)
+         ═══════════════════════════════════════════════════════════════════════════ -->
+    <title>Team Ductile or Die - Connect With Us</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background-color: #2c3e50;
+            background: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 20px 25px;
+            background-color: rgba(187, 0, 0, 0.95);
+            color: white;
+            border-radius: 15px 15px 0 0;
+            margin-bottom: -1px;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subheader {
+            font-size: 1.1rem;
+            color: #f0f0f0;
+            font-weight: 300;
+        }
+        
+        .professor {
+            font-size: 1rem;
+            margin-top: 10px;
+            color: #000000;
+            font-weight: 700;
+        }
+        
+        .content {
+            background-color: rgba(52, 73, 94, 0.95);
+            padding: 30px;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+        
+        .description {
+            font-size: 1.15rem;
+            color: #ecf0f1;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            text-align: justify;
+            padding: 20px;
+            background-color: rgba(44, 62, 80, 0.7);
+            border-radius: 10px;
+            border-left: 4px solid #BB0000;
+        }
+        
+        .team-section {
+            margin-top: 20px;
+        }
+        
+        .team-title {
+            font-size: 1.8rem;
+            color: #ecf0f1;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .team-member {
+            background-color: transparent;
+            padding: 0;
+            border-radius: 12px;
+            overflow: visible;
+            border: none;
+            transition: transform 0.3s;
+            box-shadow: none;
+            min-width: 280px;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+        
+        .member-photo {
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .member-photo::before {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background-color: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .member-photo .initial {
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            z-index: 1;
+            text-transform: uppercase;
+        }
+        
+        .member-info {
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .member-name {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .linkedin-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #0077B5;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .linkedin-btn:hover {
+            background-color: #005885;
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        
+        .linkedin-icon {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+        
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            padding: 30px 20px;
+            background-color: rgba(52, 73, 94, 0.95);
+            color: #ecf0f1;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+        
+        footer a {
+            color: #c0c0c0;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        footer a:hover {
+            color: #e0e0e0;
+            text-decoration: underline;
+        }
+        
+        /* LinkedIn badge container */
+        .linkedin-badge-container {
+            margin-top: 15px;
+            min-height: 320px;
+            padding: 0;
+            width: 100%;
+            overflow: visible;
+        }
+        
+        /* Hide redundant fallback links */
+        .badge-base__link.LI-simple-link {
+            display: none !important;
+            visibility: hidden !important;
+        }
+        
+        /* Make badges larger */
+        .LI-profile-badge {
+            transform: scale(1.2);
+            transform-origin: top center;
+        }
+        
+        @media (max-width: 1500px) {
+            .team-grid {
+                grid-template-columns: repeat(3, minmax(280px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .description {
+                font-size: 1rem;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- ═══════════════════════════════════════════════════════════════════════════
+             STEP 2: Change your team name, course, and instructor
+             ═══════════════════════════════════════════════════════════════════════════ -->
+        <header>
+            <h1>Team Ductile or Die</h1>
+            <p class="subheader">MATSCEN 3331L (5886) | The Ohio State University | October 2025</p>
+            <p class="professor">Instructor: Professor Elvin Beach</p>
+        </header>
+        
+        <div class="content">
+            
+            <!-- ═══════════════════════════════════════════════════════════════════════════
+                 STEP 3: Change your team description
+                 ═══════════════════════════════════════════════════════════════════════════ -->
+            <p class="description">
+                Through the deliberate control of both composition and heat treatment, we engineer the material 
+                architecture of aluminum alloys for aircraft components and everyday objects, making them 
+                lighter, stronger, and more durable.
+            </p>
+            
+            <div class="team-section">
+                <h2 class="team-title">Connect with Our Team</h2>
+                
+                <!-- STEP 4: Add your team members' LinkedIn profiles below -->
+                
+                <div class="team-grid">
+                    
+                    <!-- TEAM MEMBER 1 ────────────────────────────────────────────────────── -->
+                    <div class="team-member">
+                        <div class="member-info">
+                            <div class="linkedin-badge-container">
+                                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="kasar-moos-a1b1b11b7" data-version="v1">
+                                    <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/kasar-moos-a1b1b11b7?trk=profile-badge">Kasar Moos</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- TEAM MEMBER 2 ────────────────────────────────────────────────────── -->
+                    <div class="team-member">
+                        <div class="member-info">
+                            <div class="linkedin-badge-container">
+                                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="evelyn-detwiler-mse" data-version="v1">
+                                    <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/evelyn-detwiler-mse?trk=profile-badge">Evelyn Detwiler</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- TEAM MEMBER 3 ────────────────────────────────────────────────────── -->
+                    <div class="team-member">
+                        <div class="member-info">
+                            <div class="linkedin-badge-container">
+                                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="dimascad" data-version="v1">
+                                    <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/dimascad?trk=profile-badge">Anthony DiMascio</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- TEAM MEMBER 4 ────────────────────────────────────────────────────── -->
+                    <div class="team-member">
+                        <div class="member-info">
+                            <div class="linkedin-badge-container">
+                                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="sarahharvey386" data-version="v1">
+                                    <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/sarahharvey386?trk=profile-badge">Sarah Harvey</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- TEAM MEMBER 5 ────────────────────────────────────────────────────── -->
+                    <div class="team-member">
+                        <div class="member-info">
+                            <div class="linkedin-badge-container">
+                                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="roshan-robinson-58932b235" data-version="v1">
+                                    <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/roshan-robinson-58932b235?trk=profile-badge">Roshan Robinson</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div><!-- END TEAM GRID -->
+            </div>
+        </div>
+        
+        <!-- ═══════════════════════════════════════════════════════════════════════════════
+             STEP 5: Change your project link and description
+             
+             If you don't have an external project link, you can delete this entire 
+             <footer>...</footer> section
+             ═══════════════════════════════════════════════════════════════════════════════ -->
+        <footer>
+            <p>Learn how we engineer aerospace-grade aluminum alloys in our Instructables project:</p>
+            <p style="margin-top: 15px;">
+                <a href="https://www.instructables.com/Aerospace-Grade-Aluminum-7249/" target="_blank" rel="noopener noreferrer" style="font-size: 1.2rem;">
+                    Aerospace Grade Aluminum
+                </a>
+            </p>
+        </footer>
+    </div>
+    
+    <!-- LinkedIn Profile Badge Script (required - do not remove) -->
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+    
+    <!-- Badge styling script (do not remove) -->
+    <script>
+        setTimeout(function() {
+            // Hide the fallback links
+            var links = document.querySelectorAll('.badge-base__link.LI-simple-link');
+            links.forEach(function(link) {
+                link.style.display = 'none';
+            });
+            
+            // Make badges larger if they're not already
+            var badges = document.querySelectorAll('.LI-profile-badge-view');
+            badges.forEach(function(badge) {
+                badge.style.transform = 'scale(1.1)';
+                badge.style.transformOrigin = 'top center';
+            });
+        }, 1000); // Wait 1 second for badges to load
+    </script>
+</body>
+</html>
